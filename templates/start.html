@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles.css') }}">
+  
+	<title> Climate Change with Air Quality Tracker </title>  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script></head>
+<body>
+  
+  
+<table style="background-color: rgb(223, 177, 25); height:10%;">
+  <td style="height:10px; width: 35%;"><img src="{{url_for('static',filename='images.png')}}" style="width:auto"></td>
+  <!-- Project Title -->
+  <td style="width: 70%;"><h10 style="color: rgb(22, 142, 189); font-size: 25px; font-family: cursive;"> Climate Change with Air Quality Tracker  </h10></td>
+  <!-- Map button -->
+  <td style="text-align-last: center;"><button class="button" style="width: 300px;"><a href="home" >Air Quality Tracker</a></button></td>
+</table>
+<!-- Live map menu bar-->
+<div class="navbar" style="text-align:justify;">
+    
+   
+      <div class="dropdown" style="text-align: right;"> 
+        <button class="dropbtn"><a href="#">Live Map</a> 
+          
+        </button>
+        
+      </div>
+      
+  </div> 
+  <div>
+    <p><b>What Is Climate Change?</b><br>
+      Climate change is generally defined as a significant variation of average weather conditions—say, conditions becoming warmer, wetter, or drier—over several decades or more. It’s the longer-term trend that differentiates climate change from natural weather variability.
+      
+      Record floods. Raging storms. Deadly heat. Climate change manifests itself in myriad ways and is experienced by every living being, although not equally. Throughout the world, the economically disadvantaged and people of color—those who have contributed the very least to the root causes of climate change—are the most likely to suffer from its worst impacts. Here are the basics on what causes climate change, how it’s affecting the planet and its people, and what we can do about it.
+      
+      <br><b>How Is Climate Change Measured Over Time?</b><br>
+      Climate refers to the general weather conditions of a place as measured over many years. In the United States, for example, Maine’s climate is cold and snowy in winter while South Florida’s is tropical year-round.
+      
+      Earth-orbiting satellites, remote meteorological stations, and ocean buoys are used to monitor present-day weather and climate, but it’s paleoclimatology data from natural sources like ice
+      
+      cores, tree rings, corals, and ocean and lake sediments that have enabled scientists to extend the earth’s climatic records back millions of years. These records provide a comprehensive look at the long-term changes in the earth’s atmosphere, oceans, land surfaces, and cryosphere (frozen water systems). Scientists then feed this data into sophisticated climate models that are able to predict future climate trends with impressive accuracy.
+      
+      It’s worth noting that while climate change and global warming are often used interchangeably, global warming—the recent rise in the global average temperature near the earth’s surface—is just one aspect of climate change.
+      
+      <br><b>What Causes Climate Change?</b><br>
+      The mechanics of the earth’s climate system are simple. When energy from the sun is reflected off the earth and back into space (mostly by clouds and ice), or when the earth’s atmosphere releases energy, the planet cools. When the earth absorbs the sun’s energy, or when atmospheric gases prevent heat released by the earth from radiating into space (the greenhouse effect), the planet warms. A variety of factors, both natural and human, can influence the earth’s climate system.</p>
+  </div>
+  <!-- slide show container -->
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="{{url_for('static',filename='slide1.jpg')}}" style="width:100%">
+      
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="{{url_for('static',filename='slide2.jpg')}}" style="width:100%">
+      
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="{{url_for('static',filename='slide3.jpg')}}" style="width:100%">
+     
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="{{url_for('static',filename='slide4.jpg')}}" style="width:100%">
+      
+    </div>
+    
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+    </div>
+    
+    <script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+<!-- Air pollution and climate change second menu bar-->
+    <div class="container">
+      <h2>Air Pollution</h2>
+      <p>Air pollution refers to the release of pollutants into the air—pollutants which are detrimental to human health and the planet as a whole. According to the World Health Organization (WHO), each year air pollution is responsible for nearly seven million deaths around the globe. Nine out of ten human beings currently breathe air that exceeds the WHO’s guideline limits for pollutants, with those living in low- and middle-income countries suffering the most. In the United States, the Clean Air Act, established in 1970, authorizes the U.S. Environmental Protection Agency (EPA) to safeguard public health by regulating the emissions of these harmful air pollutants.</p>
+      <p>“Most air pollution comes from energy use and production,” says John Walke, director of the Clean Air Project, part of the Climate and Clean Energy program at NRDC. “Burning fossil fuels releases gases and chemicals into the air.” And in an especially destructive feedback loop, air pollution not only contributes to climate change but is also exacerbated by it. “Air pollution in the form of carbon dioxide and methane raises the earth’s temperature,” Walke says. “Another type of air pollution, smog, is then worsened by that increased heat, forming when the weather is warmer and there’s more ultraviolet radiation.” Climate change also increases the production of allergenic air pollutants, including mold (thanks to damp conditions caused by extreme weather and increased flooding) and pollen (due to a longer pollen season).
+
+        “We’ve made progress over the last 50 years improving air quality in the United States thanks to the Clean Air Act,” says Kim Knowlton, senior scientist and deputy director of the NRDC Science Center. “But climate change will make it harder in the future to meet pollution standards, which are designed to protect health.”</p>
+      <ul class="nav nav-tabs">
+        <!--<li class="active"><a data-toggle="tab" href="#home"></a></li>-->
+        <li class="active"><a data-toggle="tab" href="#menu1">Air Pollution </a></li>
+        <li><a data-toggle="tab" href="#menu2">Climate Change </a></li>
+        <li><a data-toggle="tab" href="#menu3"> Protect Your Health</a></li>
+      </ul>
+    
+      <div class="tab-content">
+        <div id="menu1" class="tab-pane fade in active" style="background-color: rgb(126, 221, 208);">
+          <h3>Air Pollution</h3>
+          <img src="{{url_for('static',filename='About.jpg')}}" href="#"  style="height: 300px; width: 600px; align-self: center;">
+          <p>Air pollution is a mix of hazardous substances from both human-made and natural sources.
+
+            Vehicle emissions, fuel oils and natural gas to heat homes, by-products of manufacturing and power generation, particularly coal-fueled power plants, and fumes from chemical production are the primary sources of human-made air pollution.
+            
+            Nature releases hazardous substances into the air, such as smoke from wildfires, which are often caused by people; ash and gases from volcanic eruptions; and gases, like methane, which are emitted from decomposing organic matter in soils.
+            
+            <b>Traffic-Related Air Pollution </b>(TRAP), from motor vehicle emissions, may be the most recognizable form of air pollution. It contains most of the elements of human-made air pollution: ground-level ozone, various forms of carbon, nitrogen oxides, sulfur oxides, volatile organic compounds, polycyclic aromatic hydrocarbons, and fine particulate matter.
+            
+            <b>ozone</b>, an atmospheric gas, is often called smog when at ground level. It is created when pollutants emitted by cars, power plants, industrial boilers, refineries, and other sources chemically react in the presence of sunlight.
+            
+            <b>Noxious gases</b>, which include carbon dioxide, carbon monoxide, nitrogen oxides (NOx), and sulfur oxides (SOx), are components of motor vehicle emissions and byproducts of industrial processes.
+            
+            <b>Particulate matter </b>(PM) is composed of chemicals such as sulfates, nitrates, carbon, or mineral dusts. Vehicle and industrial emissions from fossil fuel combustion, cigarette smoke, and burning organic matter, such as wildfires, all contain PM.
+            
+            A subset of PM, fine particulate matter (PM 2.5) is 30 times thinner than a human hair. It can be inhaled deeply into lung tissue and contribute to serious health problems. PM 2.5 accounts for most health effects due to air pollution in the U.S.
+            
+            <b>Volatile organic compounds</b> (VOC) vaporize at or near room temperature—hence, the designation volatile. They are called organic because they contain carbon. VOCs are given off by paints, cleaning supplies, pesticides, some furnishings, and even craft materials like glue. Gasoline and natural gas are major sources of VOCs, which are released during combustion.
+            
+            <b>Polycyclic aromatic hydrocarbons </b>(PAH) are organic compounds containing carbon and hydrogen. Of more than 100 PAHs known to be widespread in the environment, 15 are listed in the Report on Carcinogens. In addition to combustion, many industrial processes, such as iron, steel, and rubber product manufacturing, as well as power generation, also produce PAHs as a by-product. PAHs are also found in particulate matter.</p>
+        </div>
+        <div id="menu2" class="tab-pane fade" style="background-color: rgb(126, 221, 208);">
+          <h3>Climate Change</h3>
+          <img src="{{url_for('static',filename='causes.jpg')}}" href="#" style="height: 300px; width: 600px; align-self: center;">
+          <p>Climate change can impact air quality and, conversely, air quality can impact climate change. </p>
+          <p>Changes in climate can result in impacts to local air quality. Atmospheric warming associated with climate change has the potential to increase ground-level ozone in many regions, which may present challenges for compliance with the ozone standards in the future. The impact of climate change on other air pollutants, such as particulate matter, is less certain, but research is underway to address these uncertainties.</p>
+          <p>Emissions of pollutants into the air can result in changes to the climate. Ozone in the atmosphere warms the climate, while different components of particulate matter (PM) can have either warming or cooling effects on the climate. For example, black carbon, a particulate pollutant from combustion, contributes to the warming of the Earth, while particulate sulfates cool the earth's atmosphere.</p>
+        </div>
+        <div id="menu3" class="tab-pane fade" style="background-color: rgb(126, 221, 208);">
+          <h3> Protect Your Health</h3>
+          <img src="{{url_for('static',filename='Health.jpg')}}" href="#" style="height: 300px; width: 600px; align-self: center;">
+          <p><b>1. </b>“When you see in the news or hear on the weather report that pollution levels are high, it may be useful to limit the time when children go outside or you go for a jog,” Walke says. Generally, ozone levels tend to be lower in the morning.</p>
+          <p><b>2. </b>If you exercise outside, stay as far as you can from heavily trafficked roads. Then shower and wash your clothes to remove fine particles.</p>
+          <p><b>3. </b>The air may look clear, but that doesn’t mean it’s pollution free. Utilize tools like the EPA’s air pollution monitor, AirNow, to get the latest conditions. If the air quality is bad, stay inside with windows closed.</p>
+          <p><b>4. </b>If you live or work in an area prone to wildfires, stay away from the harmful smoke as much as you’re able. Consider keeping a small stock of masks to wear when conditions are poor.</p>
+          <p><b>5. </b>Wear sunscreen. When ultraviolet radiation comes through the weakened ozone layer, it can cause skin damage and skin cancer.</p>
+        
+        </div>
+      </div>
+    </div>
+    
+</body>
+<html>
