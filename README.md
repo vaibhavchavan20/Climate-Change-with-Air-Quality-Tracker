@@ -51,8 +51,8 @@ This command creates a virtual environment inside the current folder. Visual Stu
 * Check deployment after Github action build completed, website link should avilable in *Github* build as well as *Azure App Service*. 
 ## Screenshot
 ![Main Page](./static/image1.jpg)
-![Main Page](./static/image2.jpg)
-![Main Page](./static/image3.jpg)
+![Map Page](./static/image2.jpg)
+![Map Page](./static/image3.jpg)
 ![Map Page](./static/image4.jpg)
 ### [Navigating the map](https://docs.microsoft.com/en-us/azure/azure-maps/map-accessibility#navigating-the-map)
 There are several different ways in which the map can be zoomed, panned, rotated, and pitched. Check different ways to [navigate the map](https://docs.microsoft.com/en-us/azure/azure-maps/map-accessibility#navigating-the-map) using microsoft doc.
